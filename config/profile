@@ -1,7 +1,11 @@
 #  alias for git
     alias ga="git add"
+    alias gca="git commit --amend"
     alias gcm="git commit -m"
     alias gpo="git push origin"
+    alias gr="git rebase"
+    alias gri="git rebase -i HEAD"
+    alias grv="git remote -v"
     alias gs="git status"
 
 #  ---------------------------------------------------------------------------
