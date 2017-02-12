@@ -5,6 +5,7 @@
     alias gca="git commit --amend"
     alias gcb="git checkout -b"
     alias gcm="git commit -m"
+    alias gd="git diff"
     alias gp="git pull"
     alias gpo="git push origin"
     alias gr="git rebase"
