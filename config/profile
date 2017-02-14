@@ -36,8 +36,8 @@ fi
     alias grv="git remote -v"
     alias gs="git status"
     alias tm="tmux"
-    alias tma="tmux -a"
-    alias tml="tmux -l"
+    alias tma="tmux a"
+    alias tml="tmux ls"
 
 #   Change Prompt
 #   ------------------------------------------------------------
