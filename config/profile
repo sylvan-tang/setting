@@ -21,7 +21,7 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-#  alias for git
+#   alias
     alias ga="git add"
     alias gb="git branch"
     alias gc="git checkout"
@@ -32,10 +32,12 @@ fi
     alias gp="git pull"
     alias gpo="git push origin"
     alias gr="git rebase"
-    alias gri="git rebase -i HEAD"
+    alias gri="git rebase -i"
     alias grv="git remote -v"
     alias gs="git status"
-
+    alias tm="tmux"
+    alias tma="tmux -a"
+    alias tml="tmux -l"
 
 #   Change Prompt
 #   ------------------------------------------------------------
