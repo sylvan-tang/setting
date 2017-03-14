@@ -38,6 +38,8 @@ fi
     alias tm="tmux"
     alias tma="tmux a"
     alias tml="tmux ls"
+    alias tmk="tmux kill-session"
+    alias tmt="tmux a -t"
 
 #   Change Prompt
 #   ------------------------------------------------------------
