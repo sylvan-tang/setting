@@ -48,3 +48,4 @@ fi
     }
 
     export PS1="\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+python -c'from datetime import date, datetime; today=datetime.now(); print "离三十岁还有: %s 天" % (date(2020, 4, 7) - date(today.year, today.month, today.day)).days'
