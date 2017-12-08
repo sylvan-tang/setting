@@ -1,0 +1,22 @@
+ForwardAgent yes
+Host git.in.zhihu.com
+ Port 22
+Host github.com
+ Port 22
+
+Host bitbucket.org
+ Port 22
+
+Host *
+ Port 10086
+ User suna
+
+Host *aws
+    User suna
+    ForwardAgent yes
+    ProxyCommand ssh -p 10086 -l suna gwaws -W %h.rack.zhihu.com:10086
+
+Host *.tc
+    User suna
+    ForwardAgent yes
+    ProxyCommand ssh -p 10086 -l suna gwtc -W %h.rack.zhihu.com:10086
