@@ -7,6 +7,7 @@ ln -sf $(pwd)/config/git-completion.bash ~/git-completion.bash
 ln -sf $(pwd)/git/.gitconfig ~/.gitconfig
 ln -sf $(pwd)/sbt/repositories ~/.sbt/repositories
 ln -sf $(pwd)/ssh/config ~/.ssh/config
+ln -sf $(pwd)/azkaban/.azkabanrc ~/.azkabanrc
 
 sed -i '' "s/LdapUserName/${user_name}/g" ivy2/.credentials
 sed -i '' "s/LdapUserPassword/${password}/g" ivy2/.credentials

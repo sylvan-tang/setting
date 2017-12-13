@@ -1,0 +1,6 @@
+[azkaban]
+default.alias = azkaban
+
+[alias.azkaban]
+url = https://chensuna:chensuna@azkaban-algo.in.zhihu.com:443
+verify = false
