@@ -20,3 +20,5 @@ Host *.tc
     User suna
     ForwardAgent yes
     ProxyCommand ssh -p 10086 -l suna gwtc -W %h.rack.zhihu.com:10086
+    ServerAliveInterval 20
+    ServerAliveCountMax 30
