@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+brew cask install java
+
+brew install sbt
+
+brew install maven
+
+brew install snappy
+
+sudo easy_install pip
+
+brew tap zhihu/tools git@git.in.zhihu.com:infrastructure/homebrew-tools.git
+brew install zhihu/tools/zhihu-buildout
+
+brew install gcc@5
+
+sudo pip install numpy
+
+sudo pip install scipy
+
+sudo pip install xgboost
+
+sudo pip install python-gflags==2.0.0 --user -U
+
+brew install protobuf
+
+sudo pip install zhihu-protobuf==2.6.1 -i https://mirror.in.zhihu.com/simple
