@@ -53,4 +53,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 python -c'from datetime import date, datetime; today=datetime.now(); print "离三十岁还有: %s 天" % (date(2020, 4, 7) - date(today.year, today.month, today.day)).days'
-tm
+cd ~/working
+tmux
