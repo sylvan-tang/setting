@@ -15,10 +15,6 @@ brew install zhihu/tools/zhihu-buildout
 
 brew install gcc@5
 
-sudo pip install numpy
-
-sudo pip install scipy
-
 sudo pip install xgboost
 
 sudo pip install python-gflags==2.0.0 --user -U
