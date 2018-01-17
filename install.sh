@@ -14,6 +14,7 @@ brew tap zhihu/tools git@git.in.zhihu.com:infrastructure/homebrew-tools.git
 brew install zhihu/tools/zhihu-buildout
 
 brew install gcc@5
+brew install gcc
 
 sudo pip install xgboost
 
