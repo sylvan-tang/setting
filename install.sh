@@ -2,7 +2,7 @@
 
 brew cask install java
 
-brew install sbt
+brew install sbt@0.13
 
 brew install maven
 
