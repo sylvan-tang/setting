@@ -20,7 +20,7 @@ brew install gcc
 
 brew install lzop
 
-sudo pip install xgboost
+brew install tmux
 
 sudo pip install python-gflags==2.0.0 --user -U
 
