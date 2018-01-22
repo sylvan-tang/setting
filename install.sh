@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-brew cask install java
+brew install git
 
 brew install sbt@0.13
 
