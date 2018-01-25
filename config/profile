@@ -21,41 +21,20 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-#   alias
-    alias ga="git add"
-    alias gb="git branch"
-    alias gc="git checkout"
-    alias gca="git commit --amend"
-    alias gcb="git checkout -b"
-    alias gcm="git commit -m \"rebase me\""
-    alias gd="git diff"
-    alias gpl="git pull"
-    alias gps="git push"
-    alias gr="git rebase"
-    alias gri="git rebase -i"
-    alias grv="git remote -v"
-    alias gs="git status"
-    alias tm="tmux"
-    alias tma="tmux a"
-    alias tml="tmux ls"
-    alias tmk="tmux kill-session"
-    alias tmt="tmux a -t"
-
 #   Change Prompt
 #   ------------------------------------------------------------
-    parse_git_branch() {
-        git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-    }
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 
-    export PS1="\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+export PS1="\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 export SERVICE_DISCOVERY_URI=consul://platform02.dev.rack.zhihu.com:8500
 export PATH="$HOME/.cargo/bin:$PATH"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
 export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"
-python -c'from datetime import date, datetime; today=datetime.now(); print "离三十岁还有: %s 天" % (date(2020, 4, 7) - date(today.year, today.month, today.day)).days'
-cd ~/working
 
-# Open a new session or attach to an unattached session
-tmux attach -t $(tmux ls | grep -v attached | head -1 | cut -f1 -d:) || tmux
+. ~/git-completion.bash
+
+python -c'from datetime import date, datetime; today=datetime.now(); print "离三十岁还有: %s 天" % (date(2020, 4, 7) - date(today.year, today.month, today.day)).days'
