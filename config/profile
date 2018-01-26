@@ -37,4 +37,8 @@ export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"
 
 . ~/git-completion.bash
 
+python -c'from datetime import date, datetime; today=datetime.now(); print "入职 %s 天，加油！" % (date(today.year, today.month, today.day) - date(2014, 9, 22)).days'
+
+python -c'from datetime import date, datetime; today=datetime.now(); print "坚持早起 %s 天，加油！" % (date(today.year, today.month, today.day) - date(2016, 8, 15)).days'
+
 python -c'from datetime import date, datetime; today=datetime.now(); print "离三十岁还有: %s 天" % (date(2020, 4, 7) - date(today.year, today.month, today.day)).days'
