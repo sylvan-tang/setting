@@ -32,7 +32,8 @@ export SERVICE_DISCOVERY_URI=consul://platform02.dev.rack.zhihu.com:8500
 export PATH="$HOME/.cargo/bin:$PATH"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
+jdkPath=`ls /Library/Java/JavaVirtualMachines | grep jdk1.8 | cut -d ' ' -f 1`
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/${jdkPath}/Contents/Home
 export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"
 
 . ~/git-completion.bash
