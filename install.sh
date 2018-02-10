@@ -27,6 +27,3 @@ sudo pip install python-gflags==2.0.0 --user -U
 brew install protobuf
 
 sudo pip install zhihu-protobuf==2.6.1 -i https://mirror.in.zhihu.com/simple
-
-defaults write com.apple.screencapture location ~/Downloads
-killall SystemUIServer
