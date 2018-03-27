@@ -2,5 +2,8 @@
 default.alias = azkaban
 
 [alias.azkaban]
-url = https://suna:suna@azkaban-algo.in.zhihu.com:443
+url = https://chensuna:chensuna@azkaban-algo.in.zhihu.com:443
 verify = false
+
+[session_id]
+chensuna@https.//azkaban-algo.in.zhihu.com.443 = 49a46248-a2d1-479e-b3d3-fd87142e505a
