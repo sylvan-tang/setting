@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<settings
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd"
+  xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <servers>
     <server>
       <username>LdapUserName</username>
@@ -25,20 +27,20 @@
           <url>http://repo.in.zhihu.com/artifactory/libs-release</url>
         </repository>
         <repository>
-          <snapshots />
+          <snapshots/>
           <id>snapshots</id>
           <name>libs-snapshot</name>
           <url>http://repo.in.zhihu.com/artifactory/libs-snapshot</url>
         </repository>
         <repository>
-            <id>central</id>
-            <name>zhihu-releases</name>
-            <url>http://repo.in.zhihu.com/artifactory/libs-release-local</url>
+          <id>central</id>
+          <name>zhihu-releases</name>
+          <url>http://repo.in.zhihu.com/artifactory/libs-release-local</url>
         </repository>
         <snapshotRepository>
-            <id>snapshots</id>
-            <name>zhihu-snapshots</name>
-            <url>http://repo.in.zhihu.com/artifactory/libs-snapshot-local</url>
+          <id>snapshots</id>
+          <name>zhihu-snapshots</name>
+          <url>http://repo.in.zhihu.com/artifactory/libs-snapshot-local</url>
         </snapshotRepository>
       </repositories>
       <pluginRepositories>
@@ -51,7 +53,7 @@
           <url>http://repo.in.zhihu.com/artifactory/plugins-release</url>
         </pluginRepository>
         <pluginRepository>
-          <snapshots />
+          <snapshots/>
           <id>snapshots</id>
           <name>plugins-snapshot</name>
           <url>http://repo.in.zhihu.com/artifactory/plugins-snapshot</url>
