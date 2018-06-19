@@ -97,7 +97,7 @@ if ! shopt -oq posix; then
 fi
 
 
-cd ~/working
+cd ~/codes
 
 # Open a new session or attach to an unattached session
 sessionName=`tmux ls | grep -v attached | head -1 | cut -f1 -d:`
