@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding=utf-8
 """
-  Create by @sylvan at ${TIME} on ${DATE}
+  Create at ${TIME} on ${DATE}
 """
 
 import unittest
