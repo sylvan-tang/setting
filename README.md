@@ -10,6 +10,6 @@
 
 ## deploy
 
-> git clone git@bitbucket.org:SylvanChen/personal_setting.git
+> git clone git@bitbucket.org:SylvanChen/setting.git
 
-> cd personal_setting; ./deploy.sh
+> cd setting; ./deploy.sh {LdapUserName} {LdapUserPassword}
