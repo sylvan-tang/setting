@@ -24,3 +24,5 @@ cp $(pwd)/m2/settings.xml ~/.m2/settings.xml
 
 git add .
 git stash
+
+echo "If you are init your MacBook, please change your root password by 'sudo passwd root'"
