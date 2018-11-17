@@ -35,6 +35,7 @@ export LANG=en_US.UTF-8
 jdkPath=`ls /Library/Java/JavaVirtualMachines | grep jdk1.8 | cut -d ' ' -f 1`
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/${jdkPath}/Contents/Home
 export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"
+export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 
 . ~/git-completion.bash
 

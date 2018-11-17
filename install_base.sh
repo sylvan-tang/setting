@@ -5,3 +5,7 @@
 brew install git
 
 brew install tmux
+
+sudo easy_install pip
+
+pip install zc.buildout --user
