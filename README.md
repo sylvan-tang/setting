@@ -12,4 +12,4 @@
 
 > git clone git@bitbucket.org:SylvanChen/setting.git
 
-> cd setting; ./deploy.sh {LdapUserName} {LdapUserPassword}
+> cd setting; ./deploy.sh {YourEmailAddress}
