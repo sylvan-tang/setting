@@ -10,7 +10,6 @@ mkdir ~/.sbt
 ln -sf $(pwd)/sbt/repositories ~/.sbt/repositories
 mkdir ~/.ssh
 ln -sf $(pwd)/ssh/config ~/.ssh/config
-ln -sf $(pwd)/azkaban/.azkabanrc ~/.azkabanrc
 
 mkdir ~/.ivy2
 sed -i '' "s/LdapUserName/${user_name}/g" ivy2/.credentials
