@@ -45,12 +45,4 @@ test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 
 . ~/git-completion.bash
 
-# python -c'from datetime import date, datetime; today=datetime.now(); print "入职 %s 天，加油！" % (date(today.year, today.month, today.day) - date(2014, 9, 22)).days'
-
-# python -c'from datetime import date, datetime; today=datetime.now(); print "坚持早起 %s 天，加油！" % (date(today.year, today.month, today.day) - date(2016, 8, 15)).days'
-
-# python -c'from datetime import date, datetime; today=datetime.now(); print "离三十岁还有: %s 天" % (date(2020, 4, 7) - date(today.year, today.month, today.day)).days'
-
-# python -c'print "养狗的坏处：\n    1. 过年回家不好办；\n    2. 会咬坏家具；\n    3. 满地毛；\n    4. 费钱费时间；\n    5. 捡屎；\n    6. 狗狗会生病."'
-
-python -c'from datetime import date, datetime; today=datetime.now(); print "Time to go home: %s days" % (date(2019, 4, 1) - date(today.year, today.month, today.day)).days'
+python -c'from datetime import date, datetime; today=datetime.now(); print "Time to go home: %s days" % (date(2022, 12, 30) - date(today.year, today.month, today.day)).days'
