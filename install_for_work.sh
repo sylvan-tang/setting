@@ -6,17 +6,23 @@ brew install apache-spark
 
 brew install maven
 
+# for baidu
 
-# install commands for libras
-#brew install snappy
+# 安装
+# brew install git vim zsh tmux subversion wget
 
-#brew install gcc@5
-#brew install gcc
+# 下载配置文件
+# cd ~
+# wget ftp://bjyz-chenbingjin.epc.baidu.com/home/work/base_tool/env_backup/dotfiles.tar.gz
+# wget ftp://bjyz-chenbingjin.epc.baidu.com/home/work/base_tool/env_backup/ohmyzsh.tar.gz
+# wget ftp://bjyz-chenbingjin.epc.baidu.com/home/work/base_tool/env_backup/vim.tar.gz
+# tar -xzvf vim.tar.gz       # ~/.vim 目录
+# tar -xzvf ohmyzsh.tar.gz   # ~/.oh-my-zsh 目录
+# tar -xzvf dotfiles.tar.gz  # ~/.dotfiles 目录
 
-#brew install lzop
-#sudo easy_install pip
-
-#sudo pip install python-gflags==2.0.0 --user -U
-
-#brew install protobuf
+# 添加软链
+# mv .vimrc .vimrc.bk #备份当前vim配置
+# ln -s .dotfiles/vimrc .vimrc
+# ln -s .dotfiles/tmux.conf .tmux.conf
+# ln -s .dotfiles/zshrc .zshrc
 

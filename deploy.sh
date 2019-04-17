@@ -2,6 +2,8 @@
 user_name=`whoami`
 email=$1
 
+mkdir ~/codes
+
 cp $(pwd)/git/.gitconfig ~/.gitconfig
 sed -i '' "s/UserName/${user_name}/g" ~/.gitconfig
 sed -i '' "s/YourEmailAddress/${email}/g" ~/.gitconfig
