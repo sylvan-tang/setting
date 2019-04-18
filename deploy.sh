@@ -10,7 +10,6 @@ cp $(pwd)/git/.gitconfig ~/.gitconfig
 sed -i '' "s/UserName/${user_name}/g" ~/.gitconfig
 sed -i '' "s/YourEmailAddress/${email}/g" ~/.gitconfig
 
-ln -sf $(pwd)/config/git-completion.bash ~/git-completion.bash
 ln -sf $(pwd)/config/bash_aliases ~/.bash_aliases
 ln -sf $(pwd)/config/bashrc ~/.bashrc
 ln -sf $(pwd)/config/profile ~/.profile

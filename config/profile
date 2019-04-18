@@ -43,6 +43,11 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 test -d "${GOPATH}" || mkdir "${GOPATH}"
 test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 
-. ~/git-completion.bash
-
 python -c'from datetime import date, datetime; today=datetime.now(); print "Time to go home: %s days" % (date(2022, 12, 30) - date(today.year, today.month, today.day)).days'
+
+# for git auto complete
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion || {
+    # if not found in /usr/local/etc, try the brew --prefix location
+    [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ] && \
+        . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+}
