@@ -6,10 +6,16 @@
 
 > xcode-select --install
 
-> install brew
+> ./install_base.sh
+
+> ln -s ${path_to_this_object}/setting ~/codes/setting
+
+> cd ~/codes/setting
+
+> ./install_for_work.sh  # option
+
+> ./install_for_study.sh  # option
 
 ## deploy
 
-> git clone git@bitbucket.org:SylvanChen/setting.git
-
-> cd setting; ./deploy.sh {YourEmailAddress}
+> ./deploy.sh {YourEmailAddress}

@@ -9,3 +9,4 @@ brew install tmux
 
 sudo easy_install pip
 
+mkdir ~/codes  # for working spaces, do not remove this
