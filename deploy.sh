@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 user_name=`whoami`
 email=$1
+rm ~/.bash_profile
+rm ~/.bash_login
 
 mkdir ~/codes
 
