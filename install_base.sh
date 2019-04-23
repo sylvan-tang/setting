@@ -6,6 +6,7 @@ brew install git
 brew install git bash-completion
 
 brew install tmux
+brew install ipython
 
 sudo easy_install pip
 
