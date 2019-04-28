@@ -9,7 +9,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
 # some more ls aliases
 alias ll='ls -l'
 alias la='ls -A'
@@ -37,3 +36,8 @@ alias tma="tmux a"
 alias tml="tmux ls"
 alias tmk="tmux kill-session"
 alias tmt="tmux a -t"
+
+# for work
+alias push='git push origin master:refs/for/master -f'
+alias push2myself='git push origin master:chensuna -f'
+alias ssh2relay='ssh chensuna@relay.baidu-int.com'
