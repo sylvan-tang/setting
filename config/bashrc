@@ -8,8 +8,10 @@ case $- in
       *) return;;
 esac
 
-export LC_ALL=zh_CN.GBK
-export LANG=zh_CN.GBK
+# export LC_ALL=zh_CN.GBK
+# export LANG=zh_CN.GBK
+export LC_ALL=zh_CN.UTF-8
+export LANG=zh_CN.UTF-8
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -100,14 +102,4 @@ if ! shopt -oq posix; then
 fi
 
 
-cd ~/codes
 
-# Open a new session or attach to an unattached session
-sessionName=`tmux ls | grep -v attached | head -1 | cut -f1 -d:`
-if [[ -z $sessionName ]]
-then
-  sessionName=sylvan-`date +%s`
-  tmux new-session -d -s $sessionName
-fi
-
-tmux attach-session -t $sessionName

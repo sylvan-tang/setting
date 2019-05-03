@@ -29,8 +29,6 @@ parse_git_branch() {
 
 export PS1="\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 export PATH="$HOME/.cargo/bin:$PATH"
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
 jdkPath=`ls /Library/Java/JavaVirtualMachines | grep jdk1.8 | cut -d ' ' -f 1`
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/${jdkPath}/Contents/Home
 export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"
@@ -51,3 +49,5 @@ python -c'from datetime import date, datetime; today=datetime.now(); print "Time
     [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ] && \
         . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 }
+
+cd ~/codes

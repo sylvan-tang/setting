@@ -11,6 +11,7 @@ sed -i '' "s/YourEmailAddress/${email}/g" ~/.gitconfig
 ln -sf $(pwd)/config/bash_aliases ~/.bash_aliases
 ln -sf $(pwd)/config/bashrc ~/.bashrc
 ln -sf $(pwd)/config/profile ~/.profile
+ln -sf $(pwd)/config/tmux-open-session.sh ~/.tmux-open-session.sh
 
 mkdir ~/.sbt
 ln -sf $(pwd)/sbt/repositories ~/.sbt/repositories
