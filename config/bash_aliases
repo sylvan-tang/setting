@@ -39,6 +39,6 @@ alias tmt="tmux a -t"
 alias tmo="~/.tmux-open-session.sh"
 
 # for work
-alias push='git push origin master:refs/for/master -f'
-alias push2myself='git push origin :chensuna && git push origin HEAD:chensuna -f'
+alias push='~/.push_to_baidu_master.sh'
+alias push2current='~/.push_to_baidu_current_force.sh'
 alias ssh2relay='ssh chensuna@relay.baidu-int.com'
