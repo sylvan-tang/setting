@@ -19,8 +19,6 @@ ln -sf $(pwd)/config/bash_aliases ~/.bash_aliases
 ln -sf $(pwd)/config/bashrc ~/.bashrc
 ln -sf $(pwd)/config/profile ~/.profile
 ln -sf $(pwd)/config/tmux-open-session.sh ~/.tmux-open-session.sh
-ln -sf $(pwd)/config/push_to_baidu_current_force.sh ~/.push_to_baidu_current_force.sh
-ln -sf $(pwd)/config/push_to_baidu_master.sh ~/.push_to_baidu_master.sh
 
 mkdir ~/.sbt
 ln -sf $(pwd)/sbt/repositories ~/.sbt/repositories
