@@ -39,4 +39,4 @@ alias tmt="tmux a -t"
 alias tmo="~/.tmux-open-session.sh"
 
 # for work
-alias ssh2relay='ssh chensuna@relay.baidu-int.com'
+alias ssh2relay='~/relay_auto_login/relay'
