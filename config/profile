@@ -42,6 +42,7 @@ test -d "${GOPATH}" || mkdir "${GOPATH}"
 test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 
 python -c'from datetime import date, datetime; today=datetime.now(); print "Time to go home: %s days" % (date(2022, 12, 30) - date(today.year, today.month, today.day)).days'
+python -c'from datetime import date, datetime; today=datetime.now(); print "Time for Master: %s days" % (date(2020, 12, 21) - date(today.year, today.month, today.day)).days'
 
 # for git auto complete
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion || {
