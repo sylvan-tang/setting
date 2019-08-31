@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# ĞŞ¸Ä²ÎÊıÊ±ĞèÒªÍ¬Ê±¸üĞÂ README.md
+# ä¿®æ”¹å‚æ•°æ—¶éœ€è¦åŒæ—¶æ›´æ–° README.md
 user_name=$1
 password=$2
 email=$3
