@@ -32,7 +32,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 jdkPath=`ls /Library/Java/JavaVirtualMachines | grep jdk | cut -d ' ' -f 1`
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/${jdkPath}/Contents/Home
 export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"
-export PATH="$HOME/Library/Python/2.7/bin:$PATH"
+export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 
 # Go development
 export GOPATH="${HOME}/.go"
@@ -41,8 +41,8 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 test -d "${GOPATH}" || mkdir "${GOPATH}"
 test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 
-python -c'from datetime import date, datetime; today=datetime.now(); print "Time for testing: %s days" % (date(2020, 5, 1) - date(today.year, today.month, today.day)).days'
-python -c'from datetime import date, datetime; today=datetime.now(); print "Time for Master: %s days" % (date(2020, 9, 1) - date(today.year, today.month, today.day)).days'
+python -c'from datetime import date, datetime; today=datetime.now(); print("Time for testing: %s days" % (date(2020, 5, 1) - date(today.year, today.month, today.day)).days)'
+python -c'from datetime import date, datetime; today=datetime.now(); print("Time for Master: %s days" % (date(2020, 9, 1) - date(today.year, today.month, today.day)).days)'
 
 # for git auto complete
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion || {
