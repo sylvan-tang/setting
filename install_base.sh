@@ -10,4 +10,4 @@ brew install ipython
 
 sudo easy_install pip
 
-mkdir ~/codes  # for working spaces, do not remove this
+mkdir ~/codes # for working spaces, do not remove this
