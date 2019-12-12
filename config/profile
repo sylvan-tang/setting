@@ -1,8 +1,8 @@
 # ~/.profile: executed by the command interpreter for login shells.
 # This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
 # exists.
-# see /usr/share/doc/bash/examples/startup-files for examples.
-# the files are located in the bash-doc package.
+# see /usr/share/searchDoc/bash/examples/startup-files for examples.
+# the files are located in the bash-searchDoc package.
 
 # the default umask is set in /etc/profile; for setting the umask
 # for ssh logins, install and configure the libpam-umask package.
@@ -11,7 +11,7 @@
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+# See /usr/share/searchDoc/bash-searchDoc/examples in the bash-searchDoc package.
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases

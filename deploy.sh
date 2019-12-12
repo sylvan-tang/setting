@@ -23,6 +23,5 @@ ln -sf "$(pwd)/config/bash_aliases" ~/.bash_aliases
 ln -sf "$(pwd)/config/profile" ~/.profile
 ln -sf "$(pwd)/config/tmux-open-session.sh" ~/.tmux-open-session.sh
 ln -sf "$(pwd)/config/start-for-work.sh" ~/.start-for-work.sh
-ln -sf "$(pwd)/ssh/config" ~/.ssh/config
 
 echo "If you are init your MacBook, please change your root password by 'sudo passwd root'"
