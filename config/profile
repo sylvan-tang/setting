@@ -40,7 +40,4 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"cd
 test -d "${GOPATH}" || mkdir "${GOPATH}"
 test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 
-python -c'from datetime import date, datetime; today=datetime.now(); print("Time for testing: %s days" % (date(2020, 5, 1) - date(today.year, today.month, today.day)).days)'
-python -c'from datetime import date, datetime; today=datetime.now(); print("Time for Master: %s days" % (date(2020, 9, 1) - date(today.year, today.month, today.day)).days)'
-
 cd "${HOME}/codes"
