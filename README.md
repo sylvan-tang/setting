@@ -18,4 +18,4 @@
 
 ## deploy
 
-> ./deploy.sh {YourNameInCompany} {YourPasswordInCompany} {YourEmailAddress}
+> ./deploy.sh {YourNameInCompany} {YourEmailAddress}
