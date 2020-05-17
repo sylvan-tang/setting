@@ -1,0 +1,30 @@
+# 防止长时间未操作, 断开连接
+ServerAliveInterval 30
+ServerAliveCountMax 100
+ForwardAgent yes
+StrictHostKeyChecking no
+
+# 线上跳板机bastion001.m6.momo.com
+Host gw1
+    Hostname gw1.wemomo.com
+    User chen.suna
+    Port 16020
+    IdentityFile  ~/.ssh/id_rsa
+# 备用跳板机bastion002.m6.momo.com
+Host gw2
+    Hostname gw2.wemomo.com 
+    User chen.suna
+    Port 16020
+    IdentityFile  ~/.ssh/id_rsa
+# 海外跳板机
+Host hw1
+    Hostname global-bastion.momo.com
+    User chen.suna
+    Port 16020
+    IdentityFile ~/.ssh/id_rsa
+# 隔离测试环境跳板机
+Host tgw
+    Hostname gateway-test.dx.momo.com
+    User chen.suna
+    Port 16020
+    IdentityFile  ~/.ssh/id_rsa
