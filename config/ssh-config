@@ -28,3 +28,11 @@ Host tgw
     User chen.suna
     Port 16020
     IdentityFile  ~/.ssh/id_rsa
+    
+Host stage
+    HostName awssgb-lakshmi-web001.stage.awssgb.momo.com
+    User chen.suna
+    ForwardAgent yes
+    ProxyCommand  ssh gw1  ncat -w 1  %h %p 2> /dev/null
+    ServerAliveInterval 20
+    ServerAliveCountMax 30

@@ -24,3 +24,4 @@ ln -sf "$(pwd)/config/profile" ~/.profile
 ln -sf "$(pwd)/config/tmux-open-session.sh" ~/.tmux-open-session.sh
 
 echo "If you are init your MacBook, please change your root password by 'sudo passwd root'"
+echo "Edit Custom VM Option,然后最后一行加入-javaagent:这个文件的路径，比如-javaagent:/Users/sylvan/codes/setting/config/JetbrainsIdesCrack_5_2_KeepMyLic.jar，重启即可"
