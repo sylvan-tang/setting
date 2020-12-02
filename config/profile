@@ -29,7 +29,7 @@ parse_git_branch() {
 }
 
 export PATH="$HOME/.cargo/bin:$PATH"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
 export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"
 export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 
