@@ -32,8 +32,10 @@ git config --add rebase.instructionFormat "[%an @ %ar] %s"
 if [[ "$systemName" != "Darwin" ]];then
   linuxVersion=`awk -F= '/^NAME/{print $2}' /etc/os-release`
   case $linuxVersion in
-    "CentOS Linux")
+    '"CentOS Linux"')
+      yum install dnf
       dnf install zsh
+      chsh -s /bin/zsh root
     ;;
     *)
 			echo "不支持本系统！"
