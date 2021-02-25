@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -e
 
 # 修改参数时需要同时更新 README.md
 user_name=$1
@@ -46,6 +45,7 @@ mv ~/.zshrc ~/.zshrc_bak
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 echo "" >> ~/.zshrc
 cat "$(pwd)/config/profile" >> ~/.zshrc
+
 ln -sf "$(pwd)/config/bash_aliases" ~/.bash_aliases
 ln -sf "$(pwd)/config/tmux-open-session.sh" ~/.tmux-open-session.sh
 chsh -s $(which zsh)
