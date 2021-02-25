@@ -34,10 +34,10 @@ export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"
 export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 
 # Go development
-export GOPATH="${HOME}/.go"
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"cd
-test -d "${GOPATH}" || mkdir "${GOPATH}"
-test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
+# export GOPATH="${HOME}/.go"
+# export GOROOT="$(brew --prefix golang)/libexec"
+# export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"cd
+# test -d "${GOPATH}" || mkdir "${GOPATH}"
+# test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 
 cd "${HOME}/codes"
