@@ -8,8 +8,7 @@ systemName=`uname`
 
 for file_name in .bash_profile .bash_login; do
   if [[ -f "$HOME/$file_name" ]]; then
-    echo "mv $HOME/$file_name to $HOME/$file_name.bak"
-    mv "$HOME/$file_name" to "$HOME/$file_name.bak"
+    mv "$HOME/$file_name" "$HOME/$file_name.bak"
   fi
 done
 
