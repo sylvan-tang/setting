@@ -18,7 +18,7 @@ whoami="${HOME##*/}"
 cp "$(pwd)/git/.gitconfig" ~/.gitconfig
 cp "$(pwd)/config/settings.xml" ~/.m2/settings.xml
 
-if [[ "$uName" = "Darwin" ]];then
+if [[ "$systemName" = "Darwin" ]];then
   sed -i '' "s/UserName/${user_name}/g" ~/.gitconfig
   sed -i '' "s/YourEmailAddress/${email}/g" ~/.gitconfig
   sed -i '' "s/whoami/${whoami}/g" ~/.m2/settings.xml
@@ -28,9 +28,19 @@ else
   sed -i "s/whoami/${whoami}/g" ~/.m2/settings.xml
 fi
 
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 git config --add rebase.instructionFormat "[%an @ %ar] %s"
 
+if [[ "$systemName" != "Darwin" ]];then
+  linuxVersion=`awk -F= '/^NAME/{print $2}' /etc/os-release`
+  case $linuxVersion in
+    "CentOS Linux")
+      dnf install zsh
+    ;;
+    *)
+			echo "不支持本系统！"
+	esac
+fi
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 mv ~/.zshrc ~/.zshrc_bak
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 echo "" >> ~/.zshrc
