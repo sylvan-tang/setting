@@ -31,11 +31,11 @@ fi
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 git config --add rebase.instructionFormat "[%an @ %ar] %s"
 
+mv ~/.zshrc ~/.zshrc_bak
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 echo "" >> ~/.zshrc
 cat "$(pwd)/config/profile" >> ~/.zshrc
 ln -sf "$(pwd)/config/bash_aliases" ~/.bash_aliases
-ln -sf "$(pwd)/config/profile" ~/.profile
 ln -sf "$(pwd)/config/tmux-open-session.sh" ~/.tmux-open-session.sh
 
 echo "If you are init your MacBook, please change your root password by 'sudo passwd root'"

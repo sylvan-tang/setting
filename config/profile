@@ -28,10 +28,10 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-export PATH="$HOME/.cargo/bin:$PATH"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
-export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"
-export PATH="$HOME/Library/Python/3.7/bin:$PATH"
+# export PATH="$HOME/.cargo/bin:$PATH"
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+# export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"
+# export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 
 # Go development
 # export GOPATH="${HOME}/.go"
@@ -40,4 +40,4 @@ export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 # test -d "${GOPATH}" || mkdir "${GOPATH}"
 # test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 
-cd "${HOME}/codes"
+# cd "${HOME}/codes"
