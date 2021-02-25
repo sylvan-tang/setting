@@ -46,6 +46,10 @@ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 echo "" >> ~/.zshrc
 cat "$(pwd)/config/profile" >> ~/.zshrc
 
+if [[ "$systemName" != "Darwin" ]];then
+  sed -i "s/robbyrussell/crunch/g"  ~/.zshrc
+fi
+
 ln -sf "$(pwd)/config/bash_aliases" ~/.bash_aliases
 ln -sf "$(pwd)/config/tmux-open-session.sh" ~/.tmux-open-session.sh
 chsh -s $(which zsh)
