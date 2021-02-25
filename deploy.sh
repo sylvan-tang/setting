@@ -3,6 +3,7 @@
 # 修改参数时需要同时更新 README.md
 user_name=$1
 email=$2
+systemName=`uname`
 
 for file_name in .bash_profile .bash_login; do
   if [[ -f "$HOME/$file_name" ]]; then
@@ -14,11 +15,17 @@ done
 whoami="${HOME##*/}"
 
 cp "$(pwd)/git/.gitconfig" ~/.gitconfig
-sed -i '' "s/UserName/${user_name}/g" ~/.gitconfig
-sed -i '' "s/YourEmailAddress/${email}/g" ~/.gitconfig
-
 cp "$(pwd)/config/settings.xml" ~/.m2/settings.xml
-sed -i '' "s/whoami/${whoami}/g" ~/.m2/settings.xml
+
+if [[ "$uName" = "Darwin" ]];then
+  sed -i '' "s/UserName/${user_name}/g" ~/.gitconfig
+  sed -i '' "s/YourEmailAddress/${email}/g" ~/.gitconfig
+  sed -i '' "s/whoami/${whoami}/g" ~/.m2/settings.xml
+else
+  sed -i "s/UserName/${user_name}/g" ~/.gitconfig
+  sed -i "s/YourEmailAddress/${email}/g" ~/.gitconfig
+  sed -i "s/whoami/${whoami}/g" ~/.m2/settings.xml
+fi
 
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 git config --add rebase.instructionFormat "[%an @ %ar] %s"
