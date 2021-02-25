@@ -5,5 +5,5 @@ ForwardAgent yes
 StrictHostKeyChecking no
 
 Host myMachine
-    HostName 192.168.10.103
-    User root
+  User root
+  HostName 192.168.10.103

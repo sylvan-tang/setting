@@ -38,10 +38,3 @@ alias tml="tmux ls"
 alias tmk="tmux kill-session"
 alias tmt="tmux a -t"
 alias tmo="~/.tmux-open-session.sh"
-
-# for work
-alias ssh2relay='~/relay_auto_login/relay'
-
-# for python3.7
-alias python=/usr/local/bin/python3.7
-alias pip=/usr/local/bin/pip3
