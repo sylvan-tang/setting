@@ -6,7 +6,7 @@ user_name=$1
 email=$2
 systemName=`uname`
 
-for file_name in .bash_profile .bash_login; do
+for file_name in .bash_profile .bash_login .bashrc .tcshrc .cshrc; do
   if [[ -f "$HOME/$file_name" ]]; then
     mv "$HOME/$file_name" "$HOME/$file_name.bak"
   fi
@@ -48,6 +48,7 @@ echo "" >> ~/.zshrc
 cat "$(pwd)/config/profile" >> ~/.zshrc
 ln -sf "$(pwd)/config/bash_aliases" ~/.bash_aliases
 ln -sf "$(pwd)/config/tmux-open-session.sh" ~/.tmux-open-session.sh
+chsh -s $(which zsh)
 
 echo "If you are init your MacBook, please change your root password by 'sudo passwd root'"
 echo "Edit Custom VM Option, 然后最后一行加入-javaagent:这个文件的路径，比如-javaagent:/Users/sylvan/codes/setting/config/JetbrainsIdesCrack_5_2_KeepMyLic.jar，重启即可"
