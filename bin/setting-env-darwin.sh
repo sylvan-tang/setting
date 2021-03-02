@@ -11,6 +11,7 @@ cp "$PROJECT_PATH/config/settings.xml" ~/.m2/settings.xml
 
 sed -i '' "s/UserName/${GIT_USER}/g" ~/.gitconfig
 sed -i '' "s/YourEmailAddress/${GIT_EMAIL}/g" ~/.gitconfig
+sed -i '' "s#HOME#${HOME}#g" ~/.m2/settings.xml
 
 git config --add rebase.instructionFormat "[%an @ %ar] %s"
 
