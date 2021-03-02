@@ -15,7 +15,7 @@ ln -sf "$PROJECT_PATH/bin/profile-$SYSTEM_NAME.sh" ~/.profile-$SYSTEM_NAME.sh
 ln -sf "$PROJECT_PATH/ssh/config" ~/.ssh/config
 
 if [[ ! -d "$HOME/.oh-my-zsh/" ]]; then
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 fi
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 echo "" >> ~/.zshrc
