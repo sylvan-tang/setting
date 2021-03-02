@@ -1,61 +1,32 @@
 #!/usr/bin/env bash
+set -xe
 
-# 修改参数时需要同时更新 README.md
-user_name=$1
-email=$2
-systemName=`uname`
+PROJECT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-for file_name in .bash_profile .bash_login .bashrc .tcshrc .cshrc; do
-  if [[ -f "$HOME/$file_name" ]]; then
-    mv "$HOME/$file_name" "$HOME/$file_name.bak"
-  fi
-done
+source $PROJECT_PATH/bin/build-env.sh $1 $2
 
-whoami="${HOME##*/}"
+sh $PROJECT_PATH/bin/backup.sh
+sh $PROJECT_PATH/bin/install-tools-$SYSTEM_NAME.sh
 
-cp "$(pwd)/git/.gitconfig" ~/.gitconfig
-cp "$(pwd)/config/settings.xml" ~/.m2/settings.xml
+ln -sf "$PROJECT_PATH/config/bash-aliases" ~/.bash-aliases
+ln -sf "$PROJECT_PATH/config/tmux-open-session.sh" ~/.tmux-open-session.sh
+ln -sf "$PROJECT_PATH/bin/profile.sh" ~/.profile.sh
+ln -sf "$PROJECT_PATH/bin/profile-$SYSTEM_NAME.sh" ~/.profile-$SYSTEM_NAME.sh
+ln -sf "$PROJECT_PATH/ssh/config" ~/.ssh/config
 
-if [[ "$systemName" = "Darwin" ]];then
-  sed -i '' "s/UserName/${user_name}/g" ~/.gitconfig
-  sed -i '' "s/YourEmailAddress/${email}/g" ~/.gitconfig
-  sed -i '' "s/whoami/${whoami}/g" ~/.m2/settings.xml
-else
-  sed -i "s/UserName/${user_name}/g" ~/.gitconfig
-  sed -i "s/YourEmailAddress/${email}/g" ~/.gitconfig
-  sed -i "s/whoami/${whoami}/g" ~/.m2/settings.xml
+if [[ ! -d "$HOME/.oh-my-zsh/" ]]; then
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
-
-git config --add rebase.instructionFormat "[%an @ %ar] %s"
-
-if [[ "$systemName" != "Darwin" ]];then
-  linuxVersion=`awk -F= '/^NAME/{print $2}' /etc/os-release`
-  case $linuxVersion in
-    '"CentOS Linux"')
-      yum install dnf
-      dnf install zsh
-      chsh -s /bin/zsh root
-    ;;
-    *)
-			echo "不支持本系统！"
-	esac
-fi
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-mv ~/.zshrc ~/.zshrc_bak
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 echo "" >> ~/.zshrc
-cat "$(pwd)/config/profile" >> ~/.zshrc
+echo "source ~/.profile.sh" >> ~/.zshrc
+echo "" >> ~/.zshrc
+echo "source ~/.profile-$SYSTEM_NAME.sh" >> ~/.zshrc
+echo "" >> ~/.zshrc
 
-if [[ "$systemName" != "Darwin" ]];then
-  sed -i "s/robbyrussell/crunch/g"  ~/.zshrc
-fi
-
-ln -sf "$(pwd)/config/bash_aliases" ~/.bash_aliases
-ln -sf "$(pwd)/config/tmux-open-session.sh" ~/.tmux-open-session.sh
-chsh -s $(which zsh)
+sh $PROJECT_PATH/bin/setting-env-$SYSTEM_NAME.sh $PROJECT_PATH $GIT_USER $GIT_EMAIL $ZSH_STYLE
 
 echo "If you are init your MacBook, please change your root password by 'sudo passwd root'"
-echo "Edit Custom VM Option, 然后最后一行加入-javaagent:这个文件的路径，比如-javaagent:/Users/sylvan/codes/setting/config/JetbrainsIdesCrack_5_2_KeepMyLic.jar，重启即可"
 
 git config user.name sylvan
 git config user.email sylvan2future@gmail.com
