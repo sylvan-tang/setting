@@ -28,7 +28,7 @@ case $SYSTEM_NAME in
     ZSH_STYLE=cloud
   ;;
   darwin)
-    ZSH_STYLE=dpoggi
+    ZSH_STYLE=darkblood
   ;;
   *)
     echo "不支持本系统！"
