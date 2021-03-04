@@ -42,7 +42,7 @@ case $SYSTEM_NAME in
     ZSH_STYLE=cloud
   ;;
   darwin)
-    ZSH_STYLE=Powerlevel9k
+    ZSH_STYLE=jonathan
   ;;
   *)
     echo "不支持本系统！"
