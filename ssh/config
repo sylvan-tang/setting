@@ -7,3 +7,7 @@ StrictHostKeyChecking no
 Host myMachine
   User root
   HostName 192.168.10.103
+
+Host dev02
+  User root
+  HostName 192.168.10.90

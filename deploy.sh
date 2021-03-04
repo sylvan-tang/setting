@@ -3,7 +3,7 @@ set -xe
 
 PROJECT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source $PROJECT_PATH/bin/build-env.sh $1 $2
+source $PROJECT_PATH/bin/build-env.sh $1 $2 $3 $4
 
 sh $PROJECT_PATH/bin/backup.sh
 sh $PROJECT_PATH/bin/install-tools-$SYSTEM_NAME.sh
@@ -24,7 +24,7 @@ echo "" >> ~/.zshrc
 echo "source ~/.profile-$SYSTEM_NAME.sh" >> ~/.zshrc
 echo "" >> ~/.zshrc
 
-sh $PROJECT_PATH/bin/setting-env-$SYSTEM_NAME.sh $PROJECT_PATH $GIT_USER $GIT_EMAIL $ZSH_STYLE
+sh $PROJECT_PATH/bin/setting-env-$SYSTEM_NAME.sh $PROJECT_PATH $GIT_USER $GIT_EMAIL $ZSH_STYLE $REPO_USER $REPO_PASSWORD
 
 echo "If you are init your MacBook, please change your root password by 'sudo passwd root'"
 

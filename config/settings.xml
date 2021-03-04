@@ -4,6 +4,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
     <localRepository>HOME/.m2/repository</localRepository>
+    <servers>
+        <server>
+            <id>stella</id>
+            <username>REPO_USER</username>
+            <password>REPO_PASSWORD</password>
+        </server>
+    </servers>
     <mirrors>
         <mirror>
             <id>alimaven</id>

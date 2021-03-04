@@ -7,11 +7,25 @@ else
   echo "Need input your git user name"; exit 1;
 fi
 
-GIT_EMAIL=$2
+GIT_EMAIL=email
 if [ $2 ]; then
   GIT_EMAIL=$2
 else
   echo "Need input your git email address"; exit 1;
+fi
+
+REPO_USER=user
+if [ $3 ]; then
+  REPO_USER=$3
+else
+  echo "Need input your nexus user name"; exit 1;
+fi
+
+REPO_PASSWORD=password
+if [ $4 ]; then
+  REPO_PASSWORD=$4
+else
+  echo "Need input your nexus password"; exit 1;
 fi
 
 SYSTEM_NAME=`uname`
