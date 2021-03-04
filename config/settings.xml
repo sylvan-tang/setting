@@ -24,6 +24,12 @@
             <url>https://repo.maven.apache.org/maven2/</url>
             <mirrorOf>public</mirrorOf>
         </mirror>
+        <mirror>
+            <id>stella</id>
+            <name>stella maven</name>
+            <mirrorOf>public</mirrorOf>
+            <url>http://192.168.10.30:8081/repository/maven-public/</url>
+        </mirror>
     </mirrors>
     <profiles>
         <profile>
