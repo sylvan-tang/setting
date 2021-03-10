@@ -6,12 +6,23 @@
     <localRepository>HOME/.m2/repository</localRepository>
     <servers>
         <server>
-            <id>stella</id>
+            <id>maven-releases</id>
+            <username>REPO_USER</username>
+            <password>REPO_PASSWORD</password>
+        </server>
+
+        <server>
+            <id>maven-snapshots</id>
             <username>REPO_USER</username>
             <password>REPO_PASSWORD</password>
         </server>
     </servers>
     <mirrors>
+        <mirror>
+            <id>nexus</id>
+            <mirrorOf>*</mirrorOf>
+            <url>http://mvn.senses-ai.com:8081/repository/maven-public/</url>
+        </mirror>
         <mirror>
             <id>alimaven</id>
             <name>aliyun maven</name>
@@ -23,12 +34,6 @@
             <name>apache maven</name>
             <url>https://repo.maven.apache.org/maven2/</url>
             <mirrorOf>public</mirrorOf>
-        </mirror>
-        <mirror>
-            <id>stella</id>
-            <name>stella maven</name>
-            <mirrorOf>public</mirrorOf>
-            <url>http://192.168.10.30:8081/repository/maven-public/</url>
         </mirror>
     </mirrors>
     <profiles>
