@@ -23,6 +23,8 @@ echo "source ~/.profile.sh" >> ~/.zshrc
 echo "" >> ~/.zshrc
 echo "source ~/.profile-$SYSTEM_NAME.sh" >> ~/.zshrc
 echo "" >> ~/.zshrc
+echo "unsetopt extendedglob" >> ~/.zshrc
+echo "" >> ~/.zshrc
 
 sh $PROJECT_PATH/bin/setting-env-$SYSTEM_NAME.sh $PROJECT_PATH $GIT_USER $GIT_EMAIL $ZSH_STYLE $REPO_USER $REPO_PASSWORD
 
