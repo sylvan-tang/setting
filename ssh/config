@@ -10,4 +10,12 @@ Host myMachine
 
 Host dev02
   User root
-  HostName 192.168.10.90
+  HostName 192.168.10.94
+
+Host uat
+  User root
+  HostName 192.168.10.215
+
+Host cdp
+  User root
+  HostName 192.168.10.207
