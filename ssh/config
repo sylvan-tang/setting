@@ -19,3 +19,7 @@ Host uat
 Host cdp
   User root
   HostName 192.168.10.207
+
+Host develop
+  User root
+  HostName 192.168.10.125
