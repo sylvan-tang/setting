@@ -1,18 +1,9 @@
-version: "2.1"
-
-services: # 配置在 docker 中启动的服务
-  my-coin:
-    image: my-coin:latest
-    container_name: my-coin
-    ports:
-      - 8089:8888
+version: "3"
+services:
+  datascience-notebook:
+    image: jupyter/datascience-notebook
     volumes:
-      - local-data:/var/lib/my-coin
-    networks:
-      - local-net
-
-volumes:
-  local-data:
-
-networks:
-  local-net:
+      - $COIN_PATH/programmingbitcoin:/home/jovyan/work
+    ports:
+      - 8888:8888
+    container_name: datascience-notebook-container
