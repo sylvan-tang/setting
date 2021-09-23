@@ -2,6 +2,8 @@
 set -ex
 
 export COIN_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+export DOCKER_CLIENT_TIMEOUT=120
+export COMPOSE_HTTP_TIMEOUT=120
 
 pushd $COIN_PATH
 

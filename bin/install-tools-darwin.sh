@@ -46,3 +46,9 @@ if [[ $? != 0 ]] ; then
   brew install zsh
   chsh -s /bin/zsh root
 fi
+
+which groovy
+if [[ $? != 0 ]] ; then
+  brew install groovy
+  sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+fi

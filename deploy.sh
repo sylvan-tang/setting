@@ -25,6 +25,12 @@ echo "source ~/.profile-$SYSTEM_NAME.sh" >> ~/.zshrc
 echo "" >> ~/.zshrc
 echo "unsetopt extendedglob" >> ~/.zshrc
 echo "" >> ~/.zshrc
+echo 'export PATH="/usr/local/opt/openjdk/bin:$PATH"' >> ~/.zshrc
+echo "" >> ~/.zshrc
+echo 'export CPPFLAGS="-I/usr/local/opt/openjdk/include"' >> ~/.zshrc
+echo "" >> ~/.zshrc
+echo 'export GROOVY_HOME=/usr/local/opt/groovy/libexec' >> ~/.zshrc
+echo "" >> ~/.zshrc
 
 sh $PROJECT_PATH/bin/setting-env-$SYSTEM_NAME.sh $PROJECT_PATH $GIT_USER $GIT_EMAIL $ZSH_STYLE $REPO_USER $REPO_PASSWORD
 
