@@ -14,7 +14,9 @@ ln -sf "$PROJECT_PATH/bin/profile.sh" ~/.profile.sh
 ln -sf "$PROJECT_PATH/bin/profile-$SYSTEM_NAME.sh" ~/.profile-$SYSTEM_NAME.sh
 ln -sf "$PROJECT_PATH/bin/install-orc8.sh" ~/.install-orc8.sh
 ln -sf "$PROJECT_PATH/ssh/config" ~/.ssh/config
-
+if [[ ! -d $HOME/.pip ]];then
+  mkdir -p $HOME/.pip
+fi
 if [[ -f "$HOME/.pip/pip.conf" ]]; then
   mv "$HOME/.pip/pip.conf" "$HOME/.pip/pip.conf.bak"
 fi
