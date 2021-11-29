@@ -52,3 +52,8 @@ if [[ $? != 0 ]] ; then
   brew install groovy
   sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 fi
+
+which pkg-config
+if [[ $? != 0 ]] ; then
+  brew install pkg-config
+fi
