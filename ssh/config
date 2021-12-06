@@ -23,3 +23,7 @@ Host cdp
 Host develop
   User root
   HostName 192.168.10.125
+
+Host nebula
+  User root
+  HostName 192.168.10.182
