@@ -31,3 +31,7 @@ Host nebula
 Host ml
   User root
   HostName 192.168.10.10
+
+Host flyte
+  User root
+  HostName 192.168.10.191
