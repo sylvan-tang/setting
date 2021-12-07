@@ -27,3 +27,7 @@ Host develop
 Host nebula
   User root
   HostName 192.168.10.182
+
+Host ml
+  User root
+  HostName 192.168.10.10
