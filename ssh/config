@@ -35,3 +35,7 @@ Host ml
 Host flyte
   User root
   HostName 192.168.10.191
+
+Host s3
+  User root
+  HostName 192.168.10.204
