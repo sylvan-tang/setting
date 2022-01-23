@@ -39,3 +39,7 @@ Host flyte
 Host s3
   User root
   HostName 192.168.10.204
+
+Host argo
+  User root
+  HostName 192.168.10.111

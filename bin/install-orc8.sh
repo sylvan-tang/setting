@@ -10,7 +10,5 @@ if [[ ! -d $HOME/instantclient_19_8 ]]; then
 fi
 
 export PKG_CONFIG_PATH=/Users/sylvan/instantclient_19_8
-export GOPROXY=https://goproxy.cn,direct
 export DYLD_LIBRARY_PATH=/Users/sylvan/instantclient_19_8
-export GOPRIVATE=git.senses-ai.com
 export LD_LIBRARY_PATH=/Users/sylvan/instantclient_19_8
