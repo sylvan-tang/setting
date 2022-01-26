@@ -39,3 +39,5 @@ alias tml="tmux ls"
 alias tmk="tmux kill-session"
 alias tmt="tmux a -t"
 alias tmo="~/.tmux-open-session.sh"
+
+alias python=/usr/bin/python3
