@@ -32,9 +32,9 @@ Host ml
   User root
   HostName 192.168.10.10
 
-Host flyte
+Host ai-release
   User root
-  HostName 192.168.10.191
+  HostName 192.168.10.56
 
 Host s3
   User root
@@ -43,3 +43,7 @@ Host s3
 Host argo
   User root
   HostName 192.168.10.111
+
+Host ai-test
+  User root
+  HostName 192.168.10.178
