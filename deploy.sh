@@ -51,4 +51,4 @@ echo "If you are init your MacBook, please change your root password by 'sudo pa
 
 git config user.name sylvan
 git config user.email sylvan2future@gmail.com
-git config pull.rebase true
+git config --global pull.rebase true
