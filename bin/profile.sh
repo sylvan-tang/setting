@@ -17,3 +17,14 @@ fi
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
+
+day_of_week=$(date +%w)
+if [ $day_of_week -lt 2 ];then
+  if [ -f ~/.run_docker_prune ]; then
+    docker system prune --volumes
+    rm ~/.run_docker_prune
+  fi
+else
+  touch ~/.run_docker_prune
+fi
+
