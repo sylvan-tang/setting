@@ -41,3 +41,9 @@ alias tmt="tmux a -t"
 alias tmo="~/.tmux-open-session.sh"
 
 alias python=/usr/bin/python3
+
+# some aliases for kubectl
+alias kdev="kubectl --kubeconfig ~/.kube/ai-dev.yaml"
+alias kautoml="kubectl --kubeconfig ~/.kube/ai-automl.yaml"
+alias kme="kubectl --kubeconfig ~/.kube/suna.yaml"
+alias k="kubectl --kubeconfig ~/.kube/config"
