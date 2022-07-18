@@ -28,6 +28,8 @@ while true; do
   fi
   if [ $day_of_week -lt 5 ];then
     if [ -f ~/.run_docker_prune ]; then
+      echo "Wait for docker ready!"
+      sleep 300
       docker system prune --volumes
       rm ~/.run_docker_prune
     fi
