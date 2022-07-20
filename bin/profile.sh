@@ -11,6 +11,10 @@ fi
 if [ -d "$HOME/bin" ] ; then
     export PATH="$HOME/bin:$PATH"
 fi
+# set go PATH so it includes user's private bin if it exists
+if [ -d "$HOME/go/bin" ] ; then
+    export PATH="$HOME/go/bin:$PATH"
+fi
 
 #   Change Prompt
 #   ------------------------------------------------------------
