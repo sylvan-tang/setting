@@ -5,13 +5,8 @@ ForwardAgent yes
 StrictHostKeyChecking no
 
 Host 103
-  HostName 103
-  User root
-
-Host 103
   User root
   HostName 192.168.10.103
-  Port 22
 
 Host dev02
   User root
