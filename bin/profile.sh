@@ -17,6 +17,10 @@ GO_PATH=$(whereis go | awk '{print $2}')
 if [ -d "$GO_PATH" ] ; then
     export PATH="$GO_PATH/bin:$PATH"
 fi
+GO_ENV_PATH=$(go env | grep GOPATH | cut -d \" -f 2)
+if [ -d "$GO_PATH" ] ; then
+    export PATH="$GO_ENV_PATH/bin:$PATH"
+fi
 
 #   Change Prompt
 #   ------------------------------------------------------------
