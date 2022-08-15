@@ -11,9 +11,11 @@ fi
 if [ -d "$HOME/bin" ] ; then
     export PATH="$HOME/bin:$PATH"
 fi
+
+GO_PATH=$(whereis go | awk '{print $2}')
 # set go PATH so it includes user's private bin if it exists
-if [ -d "$HOME/go/bin" ] ; then
-    export PATH="$HOME/go/bin:$PATH"
+if [ -d "$GO_PATH" ] ; then
+    export PATH="$GO_PATH/bin:$PATH"
 fi
 
 #   Change Prompt
