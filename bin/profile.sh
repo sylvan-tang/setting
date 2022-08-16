@@ -29,7 +29,7 @@ parse_git_branch() {
 }
 
 day_of_week=$(date +%w)
-while true; do 
+while false; do 
   docker ps
   if [ $? != 0 ]; then
     echo "Wait for docker daemon start!"
