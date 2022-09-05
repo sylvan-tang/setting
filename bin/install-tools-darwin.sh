@@ -33,7 +33,7 @@ fi
 which java
 if [[ $? != 0 ]] ; then
   brew tap AdoptOpenJDK/openjdk
-  brew cask install adoptopenjdk8
+  brew cask install adoptopenjdk11
 fi
 
 which docker-compose

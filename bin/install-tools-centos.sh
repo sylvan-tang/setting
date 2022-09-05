@@ -30,7 +30,7 @@ fi
 
 which java
 if [[ $? != 0 ]] ; then
-  yum install java-1.8.0-openjdk
+  yum install java-1.11.0-openjdk
 fi
 
 which docker-compose
