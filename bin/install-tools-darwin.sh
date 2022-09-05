@@ -57,3 +57,8 @@ which pkg-config
 if [[ $? != 0 ]] ; then
   brew install pkg-config
 fi
+
+which rustup
+if [[ $? != 0 ]] ; then
+  curl https://sh.rustup.rs -sSf | sh
+fi

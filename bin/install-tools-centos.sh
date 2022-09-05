@@ -43,3 +43,8 @@ if [[ $? != 0 ]] ; then
   dnf install zsh
   chsh -s /bin/zsh root
 fi
+
+which rustup
+if [[ $? != 0 ]] ; then
+  curl https://sh.rustup.rs -sSf | sh
+fi
