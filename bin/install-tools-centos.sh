@@ -47,4 +47,5 @@ fi
 which rustup
 if [[ $? != 0 ]] ; then
   curl https://sh.rustup.rs -sSf | sh
+  rustup component add rustfmt
 fi
