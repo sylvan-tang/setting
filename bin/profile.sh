@@ -48,3 +48,5 @@ while true; do
   fi
   break
 done
+
+source "$HOME/.cargo/env"
