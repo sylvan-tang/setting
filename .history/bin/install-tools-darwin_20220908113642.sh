@@ -61,6 +61,5 @@ fi
 which rustup
 if [[ $? != 0 ]] ; then
   curl https://sh.rustup.rs -sSf | sh
-  source "$HOME/.cargo/env"
   rustup component add rustfmt
 fi
