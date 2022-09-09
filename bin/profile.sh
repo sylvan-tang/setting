@@ -49,4 +49,6 @@ while true; do
   break
 done
 
+. "$HOME/.cargo/env"
+
 source "$HOME/.cargo/env"
