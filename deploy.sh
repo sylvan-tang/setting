@@ -26,7 +26,7 @@ cp "$PROJECT_PATH/config/oci8.pc" $HOME/.oci8.pc
 sed -i '' "s|HOME|${HOME}|g" $HOME/.oci8.pc
 
 if [[ ! -d "$HOME/.oh-my-zsh/" ]]; then
-  git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+  git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 fi
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 echo "" >> ~/.zshrc
