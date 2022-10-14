@@ -23,8 +23,6 @@ if [[ $? != 0 ]] ; then
   brew install ipython
 fi
 
-#mkdir ~/codes # for working spaces, do not remove this
-
 mvn -v
 if [[ $? != 0 ]] ; then
   brew install maven

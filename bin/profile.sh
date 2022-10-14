@@ -52,3 +52,8 @@ done
 . "$HOME/.cargo/env"
 
 source "$HOME/.cargo/env"
+
+if [[ ! -d ~/codes ]]; then
+  mkdir ~/codes # for working spaces, do not remove this
+fi
+cd ~/codes
