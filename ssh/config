@@ -1,0 +1,49 @@
+# 防止长时间未操作, 断开连接
+ServerAliveInterval 30
+ServerAliveCountMax 100
+ForwardAgent yes
+StrictHostKeyChecking no
+
+Host 103
+  User root
+  HostName 192.168.10.103
+
+Host dev02
+  User root
+  HostName 192.168.10.94
+
+Host uat
+  User root
+  HostName 192.168.10.215
+
+Host cdp
+  User root
+  HostName 192.168.10.207
+
+Host develop
+  User root
+  HostName 192.168.10.125
+
+Host nebula
+  User root
+  HostName 192.168.10.182
+
+Host ml
+  User root
+  HostName 192.168.10.10
+
+Host ai-release
+  User root
+  HostName 192.168.10.56
+
+Host s3
+  User root
+  HostName 192.168.10.204
+
+Host argo
+  User root
+  HostName 192.168.10.111
+
+Host ai-test
+  User root
+  HostName 192.168.10.178

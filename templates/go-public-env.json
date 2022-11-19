@@ -1,0 +1,11 @@
+{
+    "go.toolsEnvVars": {
+        "GOMODCACHE": "~/go/pkg/mod",
+        "GONOPROXY": "",
+        "GONOSUMDB": "off",
+        "GOPATH": "~/go",
+        "GOPRIVATE": "",
+        "GOPROXY": "http://goproxy.cn,direct",
+        "GOSUMDB": "off"
+    }
+}
