@@ -150,3 +150,27 @@ if [[ $? != 0 ]] ; then
     fi
   done
 fi
+
+which node
+if [[ $? != 0 ]] ; then
+  while true; do
+    echo "install node..."
+    brew install node
+    npm install -g solc
+    if [[ $? = 0 ]] ; then
+      break
+    fi
+  done
+fi
+
+which solidity
+if [[ $? != 0 ]] ; then
+  while true; do
+    echo "install solidity..."
+    brew tap ethereum/ethereum
+    brew install solidity
+    if [[ $? = 0 ]] ; then
+      break
+    fi
+  done
+fi
