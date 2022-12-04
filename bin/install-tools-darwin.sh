@@ -174,3 +174,14 @@ if [[ $? != 0 ]] ; then
     fi
   done
 fi
+
+which protobuf
+if [[ $? != 0 ]] ; then
+  while true; do
+    echo "install protobuf..."
+    brew install protobuf
+    if [[ $? = 0 ]] ; then
+      break
+    fi
+  done
+fi
