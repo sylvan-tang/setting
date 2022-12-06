@@ -3,6 +3,10 @@
 export LC_ALL=zh_CN.UTF-8
 export LANG=zh_CN.UTF-8
 
+if [[ ! -d "/tmp/go" ]]; then
+    mkdir /tmp/go
+fi
+
 if [ -f ~/.bash-aliases ]; then
     . ~/.bash-aliases
 fi

@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 set -xe
-if [[ ! -d "/tmp/go" ]]; then
-    mkdir /tmp/go
-fi
 # setting env for go
 go env -w GONOPROXY=http://goproxy.cn
 go env -w GONOSUMDB=off
