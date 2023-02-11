@@ -157,6 +157,8 @@ if [[ $? != 0 ]] ; then
     echo "install node..."
     brew install node
     npm install -g solc
+    npm install -g truffle
+    npm install -g truffle-hdwallet-provider
     if [[ $? = 0 ]] ; then
       break
     fi

@@ -13,7 +13,11 @@ ln -sf "$PROJECT_PATH/config/tmux-open-session.sh" ~/.tmux-open-session.sh
 ln -sf "$PROJECT_PATH/bin/profile.sh" ~/.profile.sh
 ln -sf "$PROJECT_PATH/bin/profile-$SYSTEM_NAME.sh" ~/.profile-$SYSTEM_NAME.sh
 ln -sf "$PROJECT_PATH/bin/install-orc8.sh" ~/.install-orc8.sh
-ln -sf "$PROJECT_PATH/ssh/config" ~/.ssh/config
+if [[ -f ~/.ssh/config ]];then
+  today=$(date +%s)
+  mv ~/.ssh/config ~/.ssh/config.$today.bak
+  cp "$PROJECT_PATH/ssh/config" ~/.ssh/config
+fi
 if [[ ! -d $HOME/.pip ]];then
   mkdir -p $HOME/.pip
 fi
