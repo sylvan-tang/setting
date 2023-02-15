@@ -44,9 +44,16 @@ while true; do
     if [ -f ~/.run_docker_prune ]; then
       echo "Wait for docker ready!"
       sleep 120
-      docker system prune --force
-      docker system prune --volumes --force
+      echo "Clean all service network container volume image in docker..."
+      for name in service container; do
+        ids=$(docker $name ls -q)
+        if [[ ! -z "$ids" ]]; then
+          docker $name rm ${ids}
+        fi
+      done
+      docker system prune -a --force
       rm ~/.run_docker_prune
+      echo "Clean done"
     fi
   else
     touch ~/.run_docker_prune
