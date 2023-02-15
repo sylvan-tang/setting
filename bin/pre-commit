@@ -12,3 +12,5 @@ if [[ $? != 0 ]]; then
 	done
 fi
 find . -name '*.sh' | grep -v ".history" | xargs -I {} shfmt -l -w {}
+
+git add .
