@@ -14,15 +14,15 @@ ln -sf "$PROJECT_PATH/bin/profile.sh" ~/.profile.sh
 ln -sf "$PROJECT_PATH/bin/profile-$SYSTEM_NAME.sh" ~/.profile-$SYSTEM_NAME.sh
 ln -sf "$PROJECT_PATH/bin/install-orc8.sh" ~/.install-orc8.sh
 if [[ -f ~/.ssh/config ]]; then
-	today=$(date +%s)
-	mv ~/.ssh/config ~/.ssh/config.$today.bak
-	cp "$PROJECT_PATH/ssh/config" ~/.ssh/config
+  today=$(date +%s)
+  mv ~/.ssh/config ~/.ssh/config.$today.bak
+  cp "$PROJECT_PATH/ssh/config" ~/.ssh/config
 fi
 if [[ ! -d $HOME/.pip ]]; then
-	mkdir -p $HOME/.pip
+  mkdir -p $HOME/.pip
 fi
 if [[ -f "$HOME/.pip/pip.conf" ]]; then
-	mv "$HOME/.pip/pip.conf" "$HOME/.pip/pip.conf.bak"
+  mv "$HOME/.pip/pip.conf" "$HOME/.pip/pip.conf.bak"
 fi
 ln -sf "$PROJECT_PATH/conf/pip.conf" ~/.pip/pip.conf
 
@@ -30,7 +30,7 @@ cp "$PROJECT_PATH/config/oci8.pc" $HOME/.oci8.pc
 sed -i '' "s|HOME|${HOME}|g" $HOME/.oci8.pc
 
 if [[ ! -d "$HOME/.oh-my-zsh/" ]]; then
-	git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+  git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 fi
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 echo "" >>~/.zshrc
