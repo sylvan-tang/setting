@@ -19,4 +19,4 @@ sed -i "s/YourEmailAddress/${GIT_EMAIL}/g" ~/.gitconfig
 
 git config --add rebase.instructionFormat "[%an @ %ar] %s"
 
-sed -i "s/robbyrussell/${ZSH_STYLE}/g"  ~/.zshrc
+sed -i "s/robbyrussell/${ZSH_STYLE}/g" ~/.zshrc

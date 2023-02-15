@@ -14,3 +14,4 @@ go install -v github.com/ramya-rao-a/go-outline@v0.0.0-20210608161538-9736a4bde9
 go install -v golang.org/x/tools/cmd/guru@latest
 go install golang.org/x/tools/gopls@latest
 go install -v github.com/go-delve/delve/cmd/dlv@latest
+go install mvdan.cc/sh/v3/cmd/shfmt@latest
