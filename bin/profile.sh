@@ -45,7 +45,7 @@ while true; do
       echo "Wait for docker ready!"
       sleep 120
       echo "Clean all unused volumes and images, stoped containers in docker..."
-      docker rm $(docker ps -a -q)
+      docker container prune --force
       docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
       docker system prune --volumes --force
       rm ~/.run_docker_prune
