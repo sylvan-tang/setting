@@ -32,7 +32,7 @@ parse_git_branch() {
   git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-day_of_week=$(date +%d)
+day_of_week=$(date +%w)
 while true; do
   docker ps
   if [ $? != 0 ]; then

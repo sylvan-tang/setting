@@ -34,7 +34,6 @@ SYSTEM_NAME=$(uname)
 if [[ "$SYSTEM_NAME" = "Linux" ]]; then
   SYSTEM_NAME=$(echo $(awk -F= '/^NAME/{print $2}' /etc/os-release) | tr -d '"' | awk '{print $1}')
 fi
-echo ${SYSTEM_NAME}
 SYSTEM_NAME=$(echo "$SYSTEM_NAME" | awk '{print tolower($0)}')
 
 PROJECT_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd)"
