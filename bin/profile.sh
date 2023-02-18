@@ -43,17 +43,22 @@ while true; do
   if [ $day_of_week -lt 5 ]; then
     if [ -f ~/.run_docker_prune ]; then
       echo "Wait for docker ready!"
-      sleep 120
-      echo "Clean all unused volumes and images, stoped containers in docker..."
-      docker container prune --force
-      docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
-      docker system prune --volumes --force
+      #sleep 120
+      #docker system prune -a
       rm ~/.run_docker_prune
       echo "Clean done"
     fi
   else
     touch ~/.run_docker_prune
   fi
+
+  echo "Clean all unused volumes and images, stoped containers in docker..."
+  docker container prune --force
+  docker images | grep "^<none>" | awk '{print $3}' | xargs -I{} docekr rmi {}
+  docker system prune --volumes --force
+
+  echo "Clean done"
+
   break
 done
 
