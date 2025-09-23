@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 set -xe
 # setting env for go
-go env -w GONOPROXY=http://goproxy.cn
+go env -w GONOPROXY=https://goproxy.cn
 go env -w GONOSUMDB=off
 go env -w GOPRIVATE=""
-go env -w GOPROXY=http://goproxy.cn,direct
+go env -w GOPROXY=https://goproxy.cn,direct
 go env -w GOSUMDB=off
 go env -w GOTMPDIR=/tmp/go
 

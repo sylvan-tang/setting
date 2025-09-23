@@ -5,7 +5,7 @@
         "GONOSUMDB": "off",
         "GOPATH": "~/go",
         "GOPRIVATE": "",
-        "GOPROXY": "http://goproxy.cn,direct",
+        "GOPROXY": "https://goproxy.cn,direct",
         "GOSUMDB": "off"
     }
 }
