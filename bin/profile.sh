@@ -16,6 +16,11 @@ if [ -d "$HOME/bin" ]; then
   export PATH="$HOME/bin:$PATH"
 fi
 
+# set PATH so it includes claude ai
+if [ -d "$HOME/.local/bin" ]; then
+  export PATH="$HOME/.local/bin:$PATH"
+fi
+
 GO_PATH=$(whereis go | awk '{print $2}')
 # set go PATH so it includes user's private bin if it exists
 if [ -d "$GO_PATH" ]; then
@@ -33,34 +38,34 @@ parse_git_branch() {
 }
 
 day_of_week=$(date +%w)
-while true; do
-  docker ps
-  if [ $? != 0 ]; then
-    echo "Wait for docker daemon start!"
-    sleep 60
-    continue
-  fi
-  if [ $day_of_week -lt 5 ]; then
-    if [ -f ~/.run_docker_prune ]; then
-      echo "Wait for docker ready!"
-      #sleep 120
-      #docker system prune -a
-      rm ~/.run_docker_prune
-      echo "Clean done"
-    fi
-  else
-    touch ~/.run_docker_prune
-  fi
-
-  echo "Clean all unused volumes and images, stoped containers in docker..."
-  docker container prune --force
-  docker images | grep "^<none>" | awk '{print $3}' | xargs -I{} docekr rmi {}
-  docker system prune --volumes --force
-
-  echo "Clean done"
-
-  break
-done
+# while true; do
+#  docker ps
+#  if [ $? != 0 ]; then
+#    echo "Wait for docker daemon start!"
+#    sleep 60
+#    continue
+#  fi
+#  if [ $day_of_week -lt 5 ]; then
+#    if [ -f ~/.run_docker_prune ]; then
+#      echo "Wait for docker ready!"
+#      #sleep 120
+#      #docker system prune -a
+#      rm ~/.run_docker_prune
+#      echo "Clean done"
+#    fi
+#  else
+#    touch ~/.run_docker_prune
+#  fi
+#
+#  echo "Clean all unused volumes and images, stoped containers in docker..."
+#  docker container prune --force
+#  docker images | grep "^<none>" | awk '{print $3}' | xargs -I{} docekr rmi {}
+#  docker system prune --volumes --force
+#
+#  echo "Clean done"
+#
+#  break
+# done
 
 . "$HOME/.cargo/env"
 
